@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MentorPi">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0033022 0.032542 -2.5826E-05"
+        rpy="0 0 0" />
+      <mass
+        value="22.672" />
+      <inertia
+        ixx="0.044161"
+        ixy="-8.6321E-05"
+        ixz="2.023E-06"
+        iyy="0.21133"
+        iyz="1.9779E-05"
+        izz="0.18577" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_lf_link">
+    <inertial>
+      <origin
+        xyz="5.7354E-05 -2.9973E-07 0.00012442"
+        rpy="0 0 0" />
+      <mass
+        value="0.3046" />
+      <inertia
+        ixx="0.00030664"
+        ixy="-6.8374E-09"
+        ixz="-3.428E-07"
+        iyy="0.0003057"
+        iyz="3.5498E-09"
+        izz="0.00054036" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_lf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_lf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lf_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11 0.0073576 0.086"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lf_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_rf_link">
+    <inertial>
+      <origin
+        xyz="-7.0865E-06 5.6914E-05 0.00012442"
+        rpy="0 0 0" />
+      <mass
+        value="0.3046" />
+      <inertia
+        ixx="0.00030571"
+        ixy="-1.1298E-07"
+        ixz="4.0613E-08"
+        iyy="0.00030662"
+        iyz="-3.404E-07"
+        izz="0.00054036" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_rf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_rf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rf_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11 0.0073576 -0.086"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rf_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_rb_link">
+    <inertial>
+      <origin
+        xyz="3.4437E-05 4.5865E-05 0.00012442"
+        rpy="0 0 0" />
+      <mass
+        value="0.3046" />
+      <inertia
+        ixx="0.00030604"
+        ixy="4.5028E-07"
+        ixz="-2.0727E-07"
+        iyy="0.0003063"
+        iyz="-2.7306E-07"
+        izz="0.00054036" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_rb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_rb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rb_joint"
+    type="continuous">
+    <origin
+      xyz="0.11 0.00735756317525278 -0.086"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rb_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_lb_link">
+    <inertial>
+      <origin
+        xyz="-3.7863860200632E-05 -4.30802429762511E-05 0.000124418886977111"
+        rpy="0 0 0" />
+      <mass
+        value="0.304599160504414" />
+      <inertia
+        ixx="0.000306109342759773"
+        ixy="4.64673066168227E-07"
+        ixz="2.27664816301896E-07"
+        iyy="0.000306225290429213"
+        iyz="2.56304663085608E-07"
+        izz="0.000540360950478997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_lb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://MentorPi/meshes/wheel_lb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lb_joint"
+    type="continuous">
+    <origin
+      xyz="0.11 0.0073576 0.086"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lb_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

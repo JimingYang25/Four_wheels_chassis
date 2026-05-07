@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>four_wheels_chassis</name>
+  <version>1.0.0</version>
+  <description>
+    URDF Description package for four_wheels_chassis robot.
+    This package contains configuration data, 3D models and launch files.
+  </description>
+
+  <author>JimingYang25</author>
+  <maintainer email="TODO@email.com">TODO</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>robot_state_publisher</depend>
+  <depend>urdf</depend>
+  <depend>rviz2</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>xacro</depend>
+
+  <!-- Gazebo dependencies -->
+  <depend>gazebo_ros</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

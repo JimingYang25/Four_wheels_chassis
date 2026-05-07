@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="four_wheels_chassis">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00330221731717334 0.0325417122827733 -2.58263806423437E-05"
+        rpy="0 0 0" />
+      <mass
+        value="22.6717435021437" />
+      <inertia
+        ixx="0.0441605176235026"
+        ixy="-8.63208331581681E-05"
+        ixz="2.0229555045361E-06"
+        iyy="0.211330876853214"
+        iyz="1.97789942384825E-05"
+        izz="0.185767983428727" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.529411764705882 0.549019607843137 0.549019607843137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_lf_link">
+    <inertial>
+      <origin
+        xyz="5.73539032563686E-05 -2.9972576836429E-07 0.000124417860132384"
+        rpy="0 0 0" />
+      <mass
+        value="0.304599150390103" />
+      <inertia
+        ixx="0.000306635546690288"
+        ixy="-6.83736707380597E-09"
+        ixz="-3.4280031096312E-07"
+        iyy="0.000305699030327149"
+        iyz="3.54977145484189E-09"
+        izz="0.000540360904407992" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_lf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_lf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lf_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11 0.00735756317525305 0.086"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lf_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_rf_link">
+    <inertial>
+      <origin
+        xyz="-7.08645731969937E-06 5.69135032745041E-05 0.000124420522378821"
+        rpy="0 0 0" />
+      <mass
+        value="0.304599227158444" />
+      <inertia
+        ixx="0.000305712856378214"
+        ixy="-1.12979510783002E-07"
+        ixz="4.06130003457354E-08"
+        iyy="0.000306621834757987"
+        iyz="-3.4039793659996E-07"
+        izz="0.000540360999500532" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_rf_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_rf_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rf_joint"
+    type="continuous">
+    <origin
+      xyz="-0.11 0.00735756317525303 -0.086"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rf_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_rb_link">
+    <inertial>
+      <origin
+        xyz="3.44374949006604E-05 4.58651366546242E-05 0.000124419260676051"
+        rpy="0 0 0" />
+      <mass
+        value="0.304599171277994" />
+      <inertia
+        ixx="0.000306038753832959"
+        ixy="4.50281370046904E-07"
+        ixz="-2.07272852667199E-07"
+        iyy="0.000306295895379469"
+        iyz="-2.73058022700886E-07"
+        izz="0.000540360963831866" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_rb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_rb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_rb_joint"
+    type="continuous">
+    <origin
+      xyz="0.11 0.00735756317525278 -0.086"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rb_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_lb_link">
+    <inertial>
+      <origin
+        xyz="-3.78638602006251E-05 -4.30802429762511E-05 0.000124418886977111"
+        rpy="0 0 0" />
+      <mass
+        value="0.304599160504414" />
+      <inertia
+        ixx="0.000306109342759773"
+        ixy="4.64673066168232E-07"
+        ixz="2.27664816301897E-07"
+        iyy="0.000306225290429213"
+        iyz="2.56304663085611E-07"
+        izz="0.000540360950478997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_lb_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://four_wheels_chassis/meshes/wheel_lb_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_lb_joint"
+    type="continuous">
+    <origin
+      xyz="0.11 0.0073575631752528 0.086"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lb_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

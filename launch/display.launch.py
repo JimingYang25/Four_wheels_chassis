@@ -2,9 +2,10 @@ import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, Command
-from launch.conditions import IfCondition         
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch_ros.parameter_descriptions import ParameterValue   # 新增导入
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
@@ -24,7 +25,7 @@ def generate_launch_description():
             name='robot_state_publisher',
             parameters=[{
                 'use_sim_time': use_sim_time,
-                'robot_description': Command(['cat ', urdf_path])
+                'robot_description': ParameterValue(Command(['cat ', urdf_path]), value_type=str)
             }]
         ),
         Node(
